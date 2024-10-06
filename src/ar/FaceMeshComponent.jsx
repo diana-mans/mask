@@ -36,8 +36,8 @@ const masks = [
 ];
 
 const cameraSize = {
-	width: window.innerWidth,
-	height: window.innerHeight,
+	width: 375,
+	height: 667,
 };
 
 const FaceMeshComponent = () => {

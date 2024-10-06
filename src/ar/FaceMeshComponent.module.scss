@@ -1,23 +1,11 @@
 .main_container {
 	position: relative;
-	width: 375px;
-	height: 667px;
+	width: 100%;
+	height: 100%;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.camera_button {
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	background-color: white;
-	border: 2px solid black;
-	z-index: 30;
+	overflow: hidden;
 }
 
 .close_button {
@@ -32,13 +20,17 @@
 }
 
 .mask_container {
+	width: 100%;
 	position: absolute;
 	bottom: 30px;
-	left: 30px;
+	left: 0px;
 
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	transition: transform 200ms linear;
 
 	.mask_button {
 		border-radius: 50%;
@@ -47,5 +39,22 @@
 		z-index: 30;
 		border: 1px solid black;
 		padding: 5px;
+		background-color: black;
+	}
+
+	.camera_button {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: white;
+		z-index: 30;
+	}
+	.selected {
+		border: 2px solid black;
+		width: 70px;
+		height: 70px;
+	}
+	.mask_button.selected {
+		border: 2px solid white;
 	}
 }

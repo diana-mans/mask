@@ -123,8 +123,6 @@ const ThreeDMaskComponent = () => {
 			onFrame: async () => {
 				await faceMesh.send({ image: videoRef.current });
 			},
-			width: cameraSize.width,
-			height: cameraSize.height,
 		});
 		videoCamera.start();
 
